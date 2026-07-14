@@ -34,7 +34,7 @@ const Contact = () => {
 
             <div>
               <h4>Phone</h4>
-              <p>+91 98765 43210</p>
+              <p>+91 94865 44451</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const Contact = () => {
           </div>
 
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919486544451"
             target="_blank"
             rel="noreferrer"
             className="whatsapp-contact"
