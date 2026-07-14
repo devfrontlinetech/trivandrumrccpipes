@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import "../../assets/css/layouts/bottom-nav.css";
 
-import { FaHome, FaBuilding, FaCubes, FaIndustry, FaFileInvoiceDollar, FaWhatsapp, FaPhoneAlt,FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaHome,
+  FaBuilding,
+  FaCubes,
+  FaIndustry,
+  FaFileInvoiceDollar,
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 
 function Bottomnav({ onMenuClick }) {
   const [open, setOpen] = useState(false);
