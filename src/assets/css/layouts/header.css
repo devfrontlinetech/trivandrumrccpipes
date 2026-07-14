@@ -1,0 +1,172 @@
+.header-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #d5ffed;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  max-width: 1400px;
+  margin: auto;
+  padding: 12px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-logo {
+  cursor: pointer;
+}
+
+.head-logo .logo {
+  width: 170px;
+  display: block;
+}
+
+/* ================= MENU ================= */
+
+.head-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.head-menu ul li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  transition: 0.3s;
+}
+
+.head-menu ul li:hover {
+  color: #ff7a00;
+}
+
+/* ================= BUTTON ================= */
+
+.head-btn button {
+  border: none;
+  outline: none;
+  background: #094c34;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.head-btn button:hover {
+  background: #0f3b6d;
+}
+
+/* ================= MENU ICON ================= */
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #0f3b6d;
+}
+
+/* ================= LAPTOP ================= */
+
+@media (max-width: 1100px) {
+  .head-menu ul {
+    gap: 25px;
+  }
+
+  .head-logo .logo {
+    width: 150px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  /* .head-btn {
+    display: none;
+  } */
+
+  /* .menu-icon {
+    display: block;
+  }
+
+  .head-menu {
+    position: fixed;
+    top: 76px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 76px);
+    background: #fff;
+    transition: 0.35s;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .head-menu.active {
+    right: 0;
+  }
+
+  .head-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 30px;
+  }
+
+  .head-menu ul li {
+    width: 100%;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+  } */
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .head-logo .logo {
+    width: 135px;
+  }
+  .head-btn button {
+    display: block;
+  }
+
+  .head-menu {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .head-logo .logo {
+    width: 120px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+  }
+
+  .head-menu ul {
+    padding: 20px;
+  }
+}
