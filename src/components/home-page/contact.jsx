@@ -78,7 +78,7 @@ const Contact = () => {
 
           <div className="contact-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4040607.5998904533!2d72.05717501249998!3d8.508521300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbd954afb907%3A0x255fd5ef5b26e02a!2sTrivandrum%20RCC%20Cement%20Pipes%20Hume%20Pipes%20-%20Thiruvananthapuram!5e0!3m2!1sen!2sin!4v1784094462422!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1826.7058786001373!2d76.9332537394802!3d8.508821387165346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbd954afb907%3A0x255fd5ef5b26e02a!2sTrivandrum%20RCC%20Cement%20Pipes%20Hume%20Pipes%20-%20Thiruvananthapuram!5e0!3m2!1sen!2sin!4v1784094957168!5m2!1sen!2sin"
               title="Google Map"
               loading="lazy"
               allowFullScreen
