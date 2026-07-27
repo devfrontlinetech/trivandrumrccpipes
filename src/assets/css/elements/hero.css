@@ -222,13 +222,13 @@
 /* Primary */
 
 .hero-btn-primary {
-  background: #f97316;
+  background: #094c34;
 
   color: #ffffff;
 }
 
 .hero-btn-primary:hover {
-  background: #ea580c;
+  background: #17a775;
 
   transform: translateY(-3px);
 }
@@ -252,9 +252,9 @@
 }
 
 .hero-btn-outline:hover {
-  border-color: #f97316;
+  border-color: #094c34;
 
-  background: #f97316;
+  background: #094c34;
 
   transform: translateY(-3px);
 }
