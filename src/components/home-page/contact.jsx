@@ -25,7 +25,10 @@ const Contact = () => {
 
             <div>
               <h4>Location</h4>
-              <p>Trivandrum, Kerala</p>
+              <p>
+                pattom palace, 71, Road, Gowreesapattom, Pattom,
+                Thiruvananthapuram, Kerala 695004
+              </p>
             </div>
           </div>
 
