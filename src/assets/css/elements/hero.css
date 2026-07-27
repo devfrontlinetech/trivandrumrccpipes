@@ -1,23 +1,26 @@
+
+
+
 /* =====================================================
    HERO SECTION
 ===================================================== */
 
-.hero-section {
+.hero-container {
   position: relative;
 
-  min-height: 760px;
-  height: 100vh;
+  width: 100%;
+  min-height: calc(100vh - 154px);
 
   display: flex;
   align-items: center;
 
   overflow: hidden;
 
-  background: #111827;
+  background: #064e3b;
 }
 
 /* =====================================================
-   BACKGROUND VIDEO
+   VIDEO
 ===================================================== */
 
 .hero-video {
@@ -28,12 +31,10 @@
   height: 100%;
 
   object-fit: cover;
-
-  z-index: 0;
 }
 
 /* =====================================================
-   OVERLAY
+   GREEN OVERLAY
 ===================================================== */
 
 .hero-overlay {
@@ -42,88 +43,32 @@
 
   z-index: 1;
 
-  background: linear-gradient(
-    90deg,
-    rgba(15, 23, 42, 0.95) 0%,
-    rgba(15, 23, 42, 0.78) 40%,
-    rgba(15, 23, 42, 0.35) 75%,
-    rgba(15, 23, 42, 0.55) 100%
-  );
-}
-
-/* Bottom gradient */
-
-.hero-overlay::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 180px;
-
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
-}
-
-/* =====================================================
-   DECORATIVE SHAPES
-===================================================== */
-
-.hero-decoration {
-  position: absolute;
-
-  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 44, 34, 0.96) 0%,
+      rgba(2, 44, 34, 0.88) 38%,
+      rgba(2, 44, 34, 0.58) 68%,
+      rgba(2, 44, 34, 0.28) 100%
+    );
 
   pointer-events: none;
 }
 
-.hero-decoration-one {
-  top: 0;
-  right: 0;
-
-  width: 38%;
-  height: 100%;
-
-  opacity: 0.08;
-
-  background: linear-gradient(135deg, transparent 45%, #f97316 45%);
-
-  clip-path: polygon(100% 0, 100% 100%, 25% 100%, 55% 50%, 25% 0);
-}
-
-.hero-decoration-two {
-  left: 0;
-  bottom: 0;
-
-  width: 220px;
-  height: 220px;
-
-  border: 1px solid rgba(249, 115, 22, 0.25);
-
-  transform: rotate(45deg) translate(-100px, 100px);
-}
-
 /* =====================================================
-   CONTAINER
+   HERO CONTENT
 ===================================================== */
 
-.hero-container {
+.hero-content {
   position: relative;
 
-  z-index: 3;
+  z-index: 2;
 
   width: min(100% - 48px, 1280px);
 
   margin: 0 auto;
-}
 
-/* =====================================================
-   CONTENT
-===================================================== */
-
-.hero-content {
-  max-width: 780px;
+  padding: 100px 0 120px;
 }
 
 /* =====================================================
@@ -131,26 +76,33 @@
 ===================================================== */
 
 .hero-tag {
+  position: relative;
+
   display: inline-flex;
   align-items: center;
-  gap: 12px;
 
-  margin-bottom: 24px;
+  gap: 14px;
 
-  color: #fb923c;
+  margin-bottom: 26px;
 
-  font-size: 12px;
+  color: #86efac;
+
+  font-size: 13px;
   font-weight: 800;
 
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.hero-tag span {
-  width: 38px;
-  height: 2px;
+.hero-tag::before {
+  content: "";
 
-  background: #f97316;
+  width: 42px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #22c55e;
 }
 
 /* =====================================================
@@ -158,146 +110,41 @@
 ===================================================== */
 
 .hero-content h1 {
+  max-width: 950px;
+
   margin: 0;
 
   color: #ffffff;
 
-  font-size: clamp(42px, 6vw, 78px);
-  line-height: 1.04;
+  font-size: clamp(48px, 6vw, 86px);
+  line-height: 1.02;
+  font-weight: 900;
 
-  font-weight: 800;
-
-  letter-spacing: -2px;
+  letter-spacing: -3px;
 }
 
-.hero-content h1 strong {
-  display: block;
+.hero-content h1 br + * {
+  color: #22c55e;
+}
 
-  color: #f97316;
-
-  font-weight: 800;
+/* If title2 is rendered separately, use this class */
+.hero-content h1 span {
+  color: #22c55e;
 }
 
 /* =====================================================
    DESCRIPTION
 ===================================================== */
 
-.hero-description {
-  max-width: 680px;
+.hero-content p {
+  max-width: 760px;
 
-  margin: 28px 0 0;
+  margin: 32px 0 0;
 
   color: rgba(255, 255, 255, 0.78);
 
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
-}
-
-/* =====================================================
-   ACTION BUTTONS
-===================================================== */
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  margin-top: 36px;
-}
-
-.hero-btn {
-  min-height: 52px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  padding: 0 24px;
-
-  border: 1px solid transparent;
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
-}
-
-/* Primary */
-
-.hero-btn-primary {
-  background: #f97316;
-
-  color: #ffffff;
-}
-
-.hero-btn-primary:hover {
-  background: #ea580c;
-
-  transform: translateY(-3px);
-}
-
-.hero-btn-primary svg {
-  transition: transform 0.3s ease;
-}
-
-.hero-btn-primary:hover svg {
-  transform: translateX(4px);
-}
-
-/* Outline */
-
-.hero-btn-outline {
-  border-color: rgba(255, 255, 255, 0.5);
-
-  background: transparent;
-
-  color: #ffffff;
-}
-
-.hero-btn-outline:hover {
-  border-color: #f97316;
-
-  background: #f97316;
-
-  transform: translateY(-3px);
-}
-
-/* =====================================================
-   TRUST FEATURES
-===================================================== */
-
-.hero-features {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-
-  margin-top: 42px;
-}
-
-.hero-feature {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  color: rgba(255, 255, 255, 0.8);
-
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.hero-feature svg {
-  color: #f97316;
-
-  font-size: 15px;
 }
 
 /* =====================================================
@@ -307,64 +154,55 @@
 .scroll-down-btn {
   position: absolute;
 
-  z-index: 5;
-
   left: 50%;
   bottom: 28px;
 
+  transform: translateX(-50%);
+
+  width: 42px;
+  height: 42px;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
 
-  border: 0;
+  border: 1px solid rgba(134, 239, 172, 0.5);
+  border-radius: 50%;
 
-  background: transparent;
+  background: rgba(6, 78, 59, 0.6);
 
-  color: rgba(255, 255, 255, 0.75);
+  color: #86efac;
 
   cursor: pointer;
 
-  transform: translateX(-50%);
-
-  font-family: inherit;
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.scroll-down-btn svg {
-  color: #f97316;
-
-  font-size: 16px;
-
   animation: scrollBounce 1.8s infinite;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
+
+.scroll-down-btn:hover {
+  background: #22c55e;
+
+  color: #022c22;
+
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
 
 @keyframes scrollBounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 
   50% {
-    transform: translateY(7px);
-  }
-}
-
-/* =====================================================
-   LARGE TABLET
-===================================================== */
-
-@media (max-width: 1100px) {
-  .hero-section {
-    min-height: 700px;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(42px, 6vw, 68px);
+    transform: translateX(-50%) translateY(8px);
   }
 }
 
@@ -372,50 +210,23 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 768px) {
-  .hero-section {
-    min-height: 720px;
-  }
-
+@media (max-width: 992px) {
   .hero-container {
-    width: min(100% - 40px, 620px);
+    min-height: calc(100vh - 130px);
   }
 
   .hero-content {
-    max-width: 100%;
+    width: min(100% - 40px, 760px);
 
-    text-align: center;
-  }
-
-  .hero-tag {
-    justify-content: center;
-
-    font-size: 10px;
-    letter-spacing: 1.5px;
+    padding: 90px 0 110px;
   }
 
   .hero-content h1 {
-    font-size: clamp(40px, 8vw, 58px);
-    letter-spacing: -1.5px;
+    font-size: clamp(44px, 7vw, 68px);
   }
 
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 15px;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-features {
-    justify-content: center;
-  }
-
-  .hero-decoration-one {
-    width: 60%;
+  .hero-content p {
+    font-size: 16px;
   }
 }
 
@@ -423,62 +234,53 @@
    MOBILE
 ===================================================== */
 
-@media (max-width: 520px) {
-  .hero-section {
-    min-height: 680px;
+@media (max-width: 768px) {
+  .hero-container {
+    min-height: 650px;
+
+    align-items: center;
   }
 
-  .hero-container {
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(2, 44, 34, 0.94),
+        rgba(2, 44, 34, 0.68)
+      );
+  }
+
+  .hero-content {
     width: calc(100% - 32px);
+
+    padding: 70px 0 100px;
   }
 
   .hero-tag {
-    gap: 8px;
+    font-size: 10px;
 
-    font-size: 9px;
+    letter-spacing: 1.5px;
   }
 
-  .hero-tag span {
-    width: 24px;
+  .hero-tag::before {
+    width: 28px;
   }
 
   .hero-content h1 {
-    font-size: 39px;
-    line-height: 1.08;
+    font-size: clamp(38px, 10vw, 58px);
+
+    letter-spacing: -1.5px;
   }
 
-  .hero-description {
-    margin-top: 22px;
+  .hero-content p {
+    margin-top: 24px;
 
     font-size: 14px;
     line-height: 1.7;
   }
 
-  .hero-actions {
-    flex-direction: column;
-
-    width: 100%;
-
-    margin-top: 30px;
-  }
-
-  .hero-btn {
-    width: 100%;
-  }
-
-  .hero-features {
-    flex-direction: column;
-    gap: 12px;
-
-    margin-top: 30px;
-  }
-
   .scroll-down-btn {
-    bottom: 20px;
-  }
-
-  .scroll-down-btn span {
-    font-size: 8px;
+    bottom: 22px;
   }
 }
 
@@ -486,21 +288,21 @@
    SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 360px) {
-  .hero-section {
-    min-height: 650px;
+@media (max-width: 480px) {
+  .hero-container {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding: 60px 0 90px;
   }
 
   .hero-content h1 {
-    font-size: 34px;
+    font-size: 40px;
   }
 
-  .hero-description {
+  .hero-content p {
     font-size: 13px;
-  }
-
-  .hero-feature {
-    font-size: 11px;
   }
 }
 
@@ -509,16 +311,11 @@
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
+  .scroll-down-btn {
+    animation: none;
+  }
+
   .hero-video {
-    animation: none;
-  }
-
-  .scroll-down-btn svg {
-    animation: none;
-  }
-
-  .hero-btn,
-  .hero-btn-primary svg {
-    transition: none;
+    display: none;
   }
 }
