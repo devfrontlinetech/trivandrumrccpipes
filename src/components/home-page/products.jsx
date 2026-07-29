@@ -32,12 +32,9 @@ const Products = () => {
         {displayedProducts.length > 0 ? (
           displayedProducts.map((item) => {
             const message = `Hello, I'm interested in ${item.name}
-
-Size: ${item.size}
-
-Price: ${item.price}
-
-Please send me more details.`;
+                                                Size: ${item.size}
+                                                Price: ${item.price}
+                             Please send me more details.`;
 
             return (
               <div
