@@ -34,7 +34,7 @@ const Products = () => {
             const message = `Hello, I'm interested in ${item.name}
                                                 Size: ${item.size}
                                                 Price: ${item.price}
-                             Please send me more details.`;
+                            Please send me more details.`;
 
             return (
               <div
