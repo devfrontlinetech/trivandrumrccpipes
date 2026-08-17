@@ -102,7 +102,7 @@
   z-index: 3;
 
   width: min(100% - 48px, 1280px);
-
+  text-align: justify !important;
   margin: 0 auto;
 }
 
