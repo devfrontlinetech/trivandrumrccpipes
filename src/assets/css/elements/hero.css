@@ -1,35 +1,26 @@
 .hero-section {
   position: relative;
-
   min-height: 760px;
   height: 100vh;
-
   display: flex;
   align-items: center;
-
   overflow: hidden;
-
   background: #111827;
 }
 
 .hero-video {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-
   z-index: 1;
-
   background: linear-gradient(
     90deg,
     rgba(15, 23, 42, 0.95) 0%,
@@ -43,94 +34,60 @@
 
 .hero-overlay::after {
   content: "";
-
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-
   height: 180px;
-
   background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
 }
 
-/* =====================================================
-   DECORATIVE SHAPES
-===================================================== */
-
 .hero-decoration {
   position: absolute;
-
   z-index: 2;
-
   pointer-events: none;
 }
 
 .hero-decoration-one {
   top: 0;
   right: 0;
-
   width: 38%;
   height: 100%;
-
   opacity: 0.08;
-
   background: linear-gradient(135deg, transparent 45%, #f97316 45%);
-
   clip-path: polygon(100% 0, 100% 100%, 25% 100%, 55% 50%, 25% 0);
 }
 
 .hero-decoration-two {
   left: 0;
   bottom: 0;
-
   width: 220px;
   height: 220px;
-
   border: 1px solid rgba(249, 115, 22, 0.25);
-
   transform: rotate(45deg) translate(-100px, 100px);
 }
 
-/* =====================================================
-   CONTAINER
-===================================================== */
-
 .hero-container {
   position: relative;
-
   z-index: 3;
-
   width: min(100% - 48px, 1280px);
   text-align: justify !important;
   margin: 0 auto;
 }
-
-/* =====================================================
-   CONTENT
-===================================================== */
 
 .hero-content {
   max-width: 780px;
   margin-top: -177px;
 }
 
-/* =====================================================
-   TAG
-===================================================== */
-
 .hero-tag {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-
   margin-bottom: 24px;
-
   color: #d1fee7;
-
   font-size: 12px;
   font-weight: 800;
-
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -138,81 +95,52 @@
 .hero-tag span {
   width: 38px;
   height: 2px;
-
   background: #f97316;
 }
 
-/* =====================================================
-   HEADING
-===================================================== */
-
 .hero-content h1 {
   margin: 0;
-
   color: #ffffff;
-
   font-size: clamp(42px, 6vw, 57px);
   line-height: 1.04;
-
   font-weight: 800;
-
   letter-spacing: -2px;
 }
 
 .hero-content h1 strong {
   display: block;
-
   color: #009454;
-
   font-weight: 800;
 }
 
-/* =====================================================
-   DESCRIPTION
-===================================================== */
-
 .hero-description {
   max-width: 680px;
-
   margin: 28px 0 0;
-
   color: rgba(255, 255, 255, 0.78);
-
   font-size: 16px;
   line-height: 1.8;
 }
-
-/* =====================================================
-   ACTION BUTTONS
-===================================================== */
 
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 15px;
-
   margin-top: 36px;
 }
 
 .hero-btn {
   min-height: 52px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-
   padding: 0 24px;
-
   border: 1px solid transparent;
   border-radius: 4px;
-
   cursor: pointer;
-
   font-family: inherit;
   font-size: 13px;
   font-weight: 700;
-
   transition:
     transform 0.3s ease,
     background 0.3s ease,
@@ -223,13 +151,11 @@
 
 .hero-btn-primary {
   background: #094c34;
-
   color: #ffffff;
 }
 
 .hero-btn-primary:hover {
   background: #17a775;
-
   transform: translateY(-3px);
 }
 
@@ -245,30 +171,21 @@
 
 .hero-btn-outline {
   border-color: rgba(255, 255, 255, 0.5);
-
   background: transparent;
-
   color: #ffffff;
 }
 
 .hero-btn-outline:hover {
   border-color: #094c34;
-
   background: #094c34;
-
   transform: translateY(-3px);
 }
-
-/* =====================================================
-   TRUST FEATURES
-===================================================== */
 
 .hero-features {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
-
   margin-top: 42px;
 }
 
@@ -276,59 +193,40 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
   color: rgba(255, 255, 255, 0.8);
-
   font-size: 12px;
   font-weight: 600;
 }
 
 .hero-feature svg {
   color: #f97316;
-
   font-size: 15px;
 }
 
-/* =====================================================
-   SCROLL BUTTON
-===================================================== */
-
 .scroll-down-btn {
   position: absolute;
-
   z-index: 5;
-
   left: 50%;
   bottom: 188px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-
   border: 0;
-
   background: transparent;
-
   color: rgba(255, 255, 255, 0.75);
-
   cursor: pointer;
-
   transform: translateX(-50%);
-
   font-family: inherit;
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .scroll-down-btn svg {
   color: #f97316;
-
   font-size: 16px;
-
   animation: scrollBounce 1.8s infinite;
 }
 
@@ -343,10 +241,6 @@
   }
 }
 
-/* =====================================================
-   LARGE TABLET
-===================================================== */
-
 @media (max-width: 1100px) {
   .hero-section {
     min-height: 700px;
@@ -356,10 +250,6 @@
     font-size: clamp(42px, 6vw, 68px);
   }
 }
-
-/* =====================================================
-   TABLET
-===================================================== */
 
 @media (max-width: 768px) {
   .hero-section {
@@ -372,13 +262,11 @@
 
   .hero-content {
     max-width: 100%;
-
     text-align: center;
   }
 
   .hero-tag {
     justify-content: center;
-
     font-size: 10px;
     letter-spacing: 1.5px;
   }
@@ -391,7 +279,6 @@
   .hero-description {
     margin-left: auto;
     margin-right: auto;
-
     font-size: 15px;
   }
 
@@ -407,10 +294,6 @@
     width: 60%;
   }
 }
-
-/* =====================================================
-   MOBILE
-===================================================== */
 
 @media (max-width: 520px) {
   .hero-section {
@@ -438,16 +321,13 @@
 
   .hero-description {
     margin-top: 22px;
-
     font-size: 14px;
     line-height: 1.7;
   }
 
   .hero-actions {
     flex-direction: column;
-
     width: 100%;
-
     margin-top: 30px;
   }
 
@@ -458,7 +338,6 @@
   .hero-features {
     flex-direction: column;
     gap: 12px;
-
     margin-top: 30px;
   }
 
@@ -470,10 +349,6 @@
     font-size: 8px;
   }
 }
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
 
 @media (max-width: 360px) {
   .hero-section {
@@ -493,10 +368,6 @@
   }
 }
 
-/* =====================================================
-   REDUCED MOTION
-===================================================== */
-
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -511,8 +382,3 @@
     transition: none;
   }
 }
-
-
-
-
-
