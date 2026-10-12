@@ -76,7 +76,7 @@ const Hero = () => {
             >
               Get a Quote
             </button>
-          </div>
+          </div> 
 
           {/* Trust Points */}
           <div className="hero-features">
