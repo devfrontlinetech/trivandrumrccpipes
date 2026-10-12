@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="hero-actions">
             <button
               className="hero-btn hero-btn-primary"
-              onClick={() => scrollToSection("products")}
+              onClick={() => scrollToSection("products")} 
             >
               Explore Our Products
               <FaArrowRight />
